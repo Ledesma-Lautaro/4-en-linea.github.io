@@ -52,18 +52,31 @@ table {
     color: rgba(237, 237, 237, 1);
     height:6rem;
 }
-.header ul{
+
+.logo img{
+  width: 6rem;
+}
+
+.header  nav ul{
     display: flex;
-    justify-content: space-around;
+    text-align: center;
+    justify-content: c;
 }
 
 body{
     background-color: rgba(24, 24, 24, 1);
+}
+
+nav{
+display: flex;
+justify-content: space-around;
+text-align: center;
 
 }
 
 footer{
     background-color:rgba(17, 0, 65, 1); 
+    height: 10rem;
 }
 
 .hades {
@@ -90,8 +103,9 @@ footer{
 }
 
 .carrousel{
+
     margin: 2rem;
-    position: relative;
+
     color: rgba(237, 237, 237, 1);;
 }
 
@@ -114,10 +128,12 @@ footer{
     left: 0%;
 }
 
-
-
-.card-img{
-    height: 90%;
+.card img{
+    height: 100%;
+    width: 100%;
     background-color: aliceblue;
-    max-height: max-content;
+    justify-content: center;
 }
+
+
+
