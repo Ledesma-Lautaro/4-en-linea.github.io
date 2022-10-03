@@ -136,15 +136,20 @@ header {
   background-color: rgba(17, 0, 65, 1);
   color: rgba(237, 237, 237, 1);
   height: auto;
+  width: auto;
   grid-row: 1;
   grid-column: 1/5;
 }
 
 header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
+}
+
+header nav .menu{
+    margin-right: 1rem;
 }
 
 nav .profile {
@@ -152,7 +157,7 @@ nav .profile {
 }
 
 .logo img {
-  width: 6rem;
+  width: 4rem;
 }
 
 main {
@@ -172,7 +177,7 @@ footer {
 }
 
 .aside-footer img {
-  width: auto;
+  width: 200%;
 }
 
 .centered-text {
@@ -214,14 +219,15 @@ article.hades-text{
 
 .card {
   background-color: rgba(17, 0, 65, 1);
-  padding: 2rem;
+  padding: 1rem;
   margin: 0.2rem;
   height: 5rem;
   border-radius: 0.5rem;
 }
 
 .carrousel {
-  margin: 2rem;
+  margin: 2rem 2rem;
+
   color: rgba(237, 237, 237, 1);
 }
 
@@ -230,8 +236,8 @@ article.hades-text{
   border: 0ch;
   border-radius: 100%;
   margin: 3rem 0rem;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   align-content: center;
   justify-content: center;
 }
@@ -270,6 +276,8 @@ article.hades-text{
 
 .game div img {
   width: 50%;
+  height: 50%;
+  object-fit: fill;
 }
 
 .caja-comentario{
@@ -282,7 +290,22 @@ article.hades-text{
     
 }
 
-.profile{
-    color: aliceblue;
+.icon-white{
+    filter: invert(100%) sepia(4%) saturate(367%) hue-rotate(206deg) brightness(116%) contrast(86%);
 
+}
+
+.breadcrumbs {
+ margin: 2rem 50rem 1rem 1rem;
+ text-align:left;
+}
+
+.game .titulo{
+    background-color: rgba(33, 0, 127, 1);
+    padding: 1rem;
+}
+
+.game .descripcion{
+    background-color: rgba(33, 0, 127, 1);
+    padding: 4rem;
 }
