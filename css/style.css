@@ -145,12 +145,10 @@ header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: auto
 }
 
-header nav .menu{
-    margin-right: 1rem;
-}
+
 
 nav .profile {
   right: 0%;
@@ -177,7 +175,7 @@ footer {
 }
 
 .aside-footer img {
-  width: 200%;
+  width: 8rem;
 }
 
 .centered-text {
@@ -227,7 +225,6 @@ article.hades-text{
 
 .carrousel {
   margin: 2rem 2rem;
-
   color: rgba(237, 237, 237, 1);
 }
 
@@ -295,9 +292,10 @@ article.hades-text{
 
 }
 
-.breadcrumbs {
- margin: 2rem 50rem 1rem 1rem;
+.game .breadcrumbs {
+  padding: 1rem;
  text-align:left;
+ background-color:rgba(24, 24, 24, 1); ;
 }
 
 .game .titulo{
