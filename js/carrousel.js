@@ -7,11 +7,11 @@ prev.addEventListener("click", moveLeft);
 next.addEventListener("click", moveRight);
 function moveLeft(){
     console.log(i);
-        if(i = 1){
+        if(i == 1){
             cards.setAttribute("style", "transform: translateX(25%)");
             i = 0;  
         }
-        else if(i = 2){
+        else if(i == 2){
             cards.setAttribute("style", "transform: translateX(-25%)");
             i = 1;
         }  
@@ -19,12 +19,12 @@ function moveLeft(){
 
 function moveRight(){
     console.log(i);
-    if(i = 0){
+    if(i == 0){
         console.log("pasa por el if right");
         cards.style.transform = "translateX(-25%)";
         i = 1;
     }
-    else if(i = 1){
+    else if(i == 1){
         console.log("pasa al else if right");
         cards.setAttribute("style", "transform: translateX(-75%)");
         i = 2;

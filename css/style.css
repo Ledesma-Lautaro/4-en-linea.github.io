@@ -175,6 +175,7 @@ footer {
   color:rgba(255, 255, 255, 1) ;
   align-items: center;
   padding: 1rem;
+  margin-top: 5rem;
 
 }
 
@@ -257,7 +258,7 @@ article.hades-text{
   flex-direction: row nowrap;
   justify-content: space-around;
   width: 90%;
-  background-color: black;
+  background-color: rgba(24, 24, 24, 1);
   height: 22rem;
   overflow: hidden;
 }
@@ -395,4 +396,61 @@ article.hades-text{
 
 .comentarios .caja-comentario .textarea{
   justify-content: right;
+}
+
+
+
+/*/////////////*/
+
+
+.main-part{
+  display: flex;
+  flex-direction: column;
+  background: url("\\img/main-hades.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  backdrop-filter: blur;
+
+}
+
+.second-part{
+  display: flex;
+  flex-direction: column;
+  background: url("\\img/green-hades.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  backdrop-filter: blur;
+}
+
+.main-part img{
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 25rem;
+}
+
+.hades-text{
+  padding: 2rem;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif ;
+  font-size: 2rem;
+  color:rgba(237, 237, 237, 1); ;
+}
+
+.hades-text h1{
+  color: rgba(240, 195, 0, 1);
+  font-size: 8rem;
+  text-shadow: 2rem black;
+}
+
+.hades-text h2{
+  color: rgba(240, 195, 0, 1);
+  font-size: 4rem;
+  text-shadow: 2rem black;
 }
