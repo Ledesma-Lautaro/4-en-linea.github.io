@@ -25,44 +25,49 @@
 
     <main>
 
+      <div class="breadcrumbs">
+        <a href="index.html"><h1>Inicio</a>/Videojuego</h1>
+      </div>
       
       <section class="game">
-          <div class="breadcrumbs">
-            <a href="index.html"><h1>Inicio</a>/Videojuego</h1>
-          </div>
-            <div class="titulo">
-                Titulo
+            <div class="title">
+                <p>Titulo</p>
+                
+
+                  <a href="">
+                    <img src="img/info-svgrepo-com.svg" alt="" class="info icon-white">
+                  </a>
+                  <a href="">
+                    <img src="img/share-svgrepo-com.svg" alt="" class="share icon-white">
+                  </a>
+    
             </div>
-            <div>
+            <div class="game-img">
                 <img src="img/thanos.jpg" alt="">
             </div>
-            <div class="description">
-              <article class="instructions">
-                  <h1>¿Cómo jugar?</h1>
-                  <div>
-                    <p>¡El primero en realizar una linea de 4 fichas gana! Pero cuidado, ¡tu contrincante puede bloquearte!</p>
-                  </div>
-                  <p>En esta nueva versión, ¡lucharas contra Thanos!
-                    Ten cuidado vaquero</p>
-                    
-
-                </article>
+          <article class="instructions">
+              <div class="description">
+                <div>
+                  <h3>¿Cómo jugar?</h3>
+                    <p>¡El primero en realizar una linea de 4 fichas gana! Pero cuidado, ¡tu contrincante puede bloquearte! En esta nueva versión, ¡lucharas contra Thanos! Ten cuidado vaquero
+                    </p>
+                </div>
+              </div>
                 <article class="examples">
-                  <h1>Jugadas ganadoras</h1>
+                  <h3>Jugadas ganadoras</h3>
                   <div>
-
                     <img src="img/ejemplo1.jpeg" alt="">
                     <img src="img/ejemplo2.jpeg" alt="">
                     <img src="img/ejemplo3.jpeg" alt="">
                   </div>
 
                 </article>
-            </div>
-
+            </article>
         </section>
 
         <section class="carrousel">
             <h1>Titulo genero</h1>
+
             <ul class="cards">
               <button class="prev"><</button>
               <a href="game.html">
@@ -101,25 +106,45 @@
           </section>
           
 
-          <section class="comentarios">
-            <h1>Deja tu comentario</h1>
+          <section class="seccion-comentarios">
+            <h3>Seccion de comentarios</h3>
             <div class="caja-comentario">
-                <div class="icon-white">
-                  <img src="img/profile.svg" alt="" >
+                <div class="profile-picture" >
+                  <img src="img/profile.svg" alt="" class="icon-white" >
                 </div>
                 <div class="textarea">
 
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Deja tu comentario..."></textarea>
                     
-                    <div>
-                        <button type="submit">Enviar</button>
+                    <div class="comment-buttons">
+                        <button type="submit" class="submit-btn">Enviar</button>
                         <button>Cancelar</button>
                     </div>
+                  </div>
 
-                </div>
 
             </div>
+
+            <ul>
+              <li class="comentario">
+                <img src="img/profile.svg" alt="" class="icon-white">
+                <p>La verdad es que este juego es malisimo, Cristian no aprueba</p>
+              
+              </li>
+              <li class="comentario">
+                <img src="img/profile.svg" alt="" class="icon-white">
+                <p>Este juego me cambió la vida. Desde que lo jugué, gano en dolares. Fabri aprueba</p>
+              </li>
+              <li class="comentario">
+                <img src="img/profile.svg" alt="" class="icon-white">
+                <p>Que vuelva la colimba, Carlos</p>
+              </li>
+            </ul>
           </section>
+          
+                      <article class="foro">
+                        <h2>¿Estas atascado? ¡Visita nuestro <a href="">foro</a>!</h2>
+                      </article>
 
     </main>
 
@@ -150,10 +175,10 @@
 
       <div class="aside-footer">
         <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
-        <nav  class="icon-white">
-          <a href=""><img src="img/instagram-svgrepo-com (1).svg" alt="" /></a>
-          <a href=""><img src="img/facebook-svgrepo-com.svg" alt="" /></a>
-          <a href=""><img src="img/youtube-svgrepo-com.svg" alt="" /></a>
+        <nav>
+          <a href=""><img class="icon-white" src="img/instagram-svgrepo-com (1).svg" alt="" /></a>
+          <a href=""><img class="icon-white" src="img/facebook-svgrepo-com.svg" alt="" /></a>
+          <a href=""><img class="icon-white" src="img/youtube-svgrepo-com.svg" alt="" /></a>
         </nav>
       </div>
     </footer>
