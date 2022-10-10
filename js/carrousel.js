@@ -1,21 +1,98 @@
+// botones
 let prev = document.querySelector(".prev");
 let next = document.querySelector(".next");
-let cards = document.querySelector(".cards");
-let mobilebutton = document.querySelector(".mobile");
+
+
+let btndestacados = document.querySelector(".destacados");
+let btnfav = document.querySelector(".favoritos");
+let btnmesa = document.querySelector(".juegosMesa");
+let btncarreras = document.querySelector(".carreras");
+let btnaventura = document.querySelector(".aventura")
+
+// cards
+
+let cardsdestacados = document.getElementById('destacados');
+let cardsfav = document.getElementById("favoritos");
+let cardsmesa = document.getElementById("juegosMesa");
+let cardscarreras = document.getElementById("carreras");
+let cardsaventura = document.getElementById("aventura");
+
+let prevboolean = false;
+let nextboolean = false;
+
 const screen = document.body;
 let i = 0;
-console.log(i);
-prev.addEventListener("click", moveLeft);
-next.addEventListener("click", moveRight);
+prev.addEventListener("click", () => becometrue(1));
+next.addEventListener("click", () => becometrue(2));
+
+btndestacados.addEventListener("click",() => whicharrow(1));
+btnfav.addEventListener("click",() => whicharrow(2));
+btnmesa.addEventListener("click", () =>whicharrow(3));
+btncarreras.addEventListener("click",() => whicharrow(4));
+btncarreras.addEventListener("click",() => whicharrow(5));
+
+
+function becometrue(num) {
+    console.log(num)
+    if(num == 1){
+        prevboolean = true;
+    }
+    else if(num == 2){
+        nextboolean = true;
+    }
+    console.log(nextboolean)
+}
+
+function whicharrow (e) {
+    console.log(e)
+    if(e = 1 ){
+        if(prevboolean){
+            moveLeft(cardsdestacados);
+        }
+        else if(nextboolean){
+            moveRight(cardsdestacados);
+        }
+        
+    }
+    if(e = 2){
+        if(prevboolean){
+            moveLeft(cardsfav);
+        }
+        else if(nextboolean){
+            moveRight(cardsfav);
+        }
+    }
+    if(e = 3){
+        if(prevboolean){
+            moveLeft(cardsmesa);
+        }
+        else if(nextboolean){
+            moveRight(cardsmesa);
+        }
+    }
+    if(e = 4){
+        if(prevboolean){
+            moveLeft(cardscarreras);
+        }
+        else if(nextboolean){
+            moveRight(cardscarreras);
+        }
+    }
+    if(e = 5){
+        if(prevboolean){
+            moveLeft(cardsaventura);
+        }
+        else if(nextboolean){
+            moveRight(cardsaventura);
+        }
+    }
+
+}
 
 
 
-
-
-
-function moveLeft(){
+function moveLeft(cards){
     let desktop = screensize();
-    console.log(i, desktop);
         if((i != 0)&&(desktop == false)){
             i--;  
             cards.style.transform = `translateX(${-1 * (48 * i)}%)`
@@ -32,9 +109,8 @@ function moveLeft(){
         }  
 }
 
-function moveRight(){
+function moveRight(cards){
     let desktop = screensize();
-    console.log(desktop);
     if((i != 5)&&(desktop == false)){
         i++;
         cards.style.transform = `translateX(${-1*(48 * i)}%)`;

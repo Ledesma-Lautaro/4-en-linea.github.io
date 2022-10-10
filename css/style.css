@@ -227,13 +227,12 @@ footer .aside-footer nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    clip-path: circle(106.1% at 50% 6%);
+    clip-path: circle(130% at 50% 6%);
     animation: 2s linear 5s  forwards preloader-animation;
   }
   .progress{
     margin: 1%;
     text-align: center;
-    overflow: hidden;
   }
   .progress-bar{
     height: 100%;
@@ -471,6 +470,18 @@ left: 86%;
 /* termina mobile */
 @media only screen and (min-width: 660px){
 
+  .footer-text{
+    visibility: hidden;
+  }
+  .footer-text::after{
+    content: "¡Olvídate del aburrimiento con NasaGames! La mayor selección de juegos está aquí, para que lleves la diversión al siguiente nivel. Juega online y sin preocupaciones: puedes jugar a todos nuestros juegos sin descargar.¡Pero cuidado! Nuestros juegos de acción solo son aptos para los más atrevidos; competirás con grandes pilotos en nuestros  juegos de carreras; y sólo los auténticos exploradores llegarán a su meta en los juegos de aventura. Y para los clásicos, las versiones clásicas y no tan clásicas de los clásicos juegos de mesa. ¡Esperamos que lo disfrutes!";
+    visibility: visible;
+  }
+
+  .preloader{
+    clip-path: circle(106.1% at 50% 6%);
+  }
+  
   .preloader-logo {
     background: url(/img/nasa-6-logo-svgrepo-com.svg);   
     background-size: 100px;
@@ -484,6 +495,17 @@ left: 86%;
     left: -1%;
   }
 
+  .progress{
+    margin: 20%;
+  }
+  /* hades */
+  .hades-text h3{
+    font-size: 2rem;
+  }
+  .hades-text{
+    display: flex;
+    align-items: center;
+  }
 
   .carrousel {
     display: flex;
