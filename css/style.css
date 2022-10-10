@@ -132,6 +132,17 @@ body {
   justify-content: center;
 }
 
+main {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/5;
+}
+
+/* header */
+
 header {
   background-color: rgba(17, 0, 65, 1);
   color: rgba(237, 237, 237, 1);
@@ -156,14 +167,7 @@ nav .profile {
   width: 4rem;
 }
 
-main {
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-column: 1/5;
-}
+/* footer */
 
 footer .aside-footer{
   display: flex;
@@ -205,15 +209,98 @@ footer .aside-footer nav {
   align-items: center;
 }
 
-
-
 .aside-footer img {
   width: 6.4rem;
 }
 
-.centered-text {
-  text-align: center;
-}
+/* preloader */
+  .preloader{
+    background-color: rgba(17, 0, 65, 1);
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(106.1% at 50% 6%);
+    animation: 2s linear 5s  forwards preloader-animation;
+  }
+  .progress{
+    margin: 1%;
+    text-align: center;
+    overflow: hidden;
+  }
+  .progress-bar{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(227, 0, 36, 1);
+    border-radius: 10px;
+    margin: 0%;
+    padding: 0%;
+    transform: translateX(-100%);
+    animation: 5s linear 0s  forwards progress-animation;
+  }
+
+  @keyframes progress-animation {
+    to{
+      transform: translateX(0%);
+    }
+  }
+  @keyframes preloader-animation {
+    to{
+      clip-path: circle(0.0% at 49.50% 5%);
+    }
+  }
+  .bar-container{
+    width: 10rem;
+    height: 1rem;
+    border: solid 2px rgba(71, 10, 255, 1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .progress .percentage{
+    margin: 10%;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .animated-logo{
+      z-index: 15; 
+      width: 20%;
+      height: 20%;
+      position: fixed;
+      top: 25%;
+  }
+  .preloader-logo {
+    background: url(/img/nasa-6-logo-svgrepo-com.svg);   
+    background-size: 80px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .spinner {
+    border-top: 5px solid rgba(227, 0, 36, 1);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    animation: spin 1s ease-in-out infinite ;
+    margin: auto;
+    position: relative;
+    top: -110%;
+    left: -14%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+/* index, presentacion juego */
 
 .hades {
   justify-content: center;
@@ -230,10 +317,10 @@ footer .aside-footer nav {
 .hades .hades-text {
   background-color: rgba(227, 0, 36, 1);
   border-radius: 15px 15px 0px 0px;
+  height: 6rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 1);
-  height: 6.5rem;
 }
 
 section.hades {
@@ -242,23 +329,21 @@ section.hades {
   margin-bottom: 25px;
 }
 
-article.hades-text {
-  text-align: center;
-  padding: 10px 20px;
-}
-
 /* carrousel */
-
-.carrousel {
+.contenedor{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.carrousel{
+  width: 90%;
   display: flex;
   flex-direction: row nowrap;
-  justify-content: space-around;
-  width: 90%;
-  background-color: rgba(24, 24, 24, 1);
-  height: 22rem;
-  overflow: hidden;
+  justify-content: flex-start;
   position: relative;
+  overflow: hidden;
 }
+
 
 .cards {
   width: 200%;
@@ -267,44 +352,107 @@ article.hades-text {
   align-items: center;
   justify-content: flex-start;
   transition: all 0.1s, ease;
-  transform: translateX(25%);
+  transform: translateX(-0%);
 }
-
 .card {
-  margin-right: 1.20%;
-  width: calc(100% / 4);
+  margin: 3%;
+  width: calc(100% / 2);
   background-color: rgba(25, 0, 97, 1);
-  height: 20rem;
+  height: 12rem;
   border-radius: 3%;
 }
 
 .card img {
-  max-width: 15rem;
+  max-width: 8rem;
   border-radius: 3% 3% 0% 0%;
 }
 
-.carrousel button {
+ .carrousel button {
   background-color: rgba(237, 237, 237, 1);
   border: 0ch;
   border-radius: 100%;
-  height: 3rem;
-  width: 3rem;
-  align-content: center;
-  justify-content: center;
-  top: 30%;
-  margin-left: 0.5%;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  bottom: 45%;
 }
 
-.next {
-  right: 0;
+ .carrousel .next{
+left: 86%;
+}
+.carrousel .prev{
+  right: 90%;
 }
 
-.prev {
-  left: 0%;
-}
+
 
 /* termina carrousel */
-/*/////////////////////////////////*/
+/* termina mobile */
+@media only screen and (min-width: 660px){
+
+  .preloader-logo {
+    background: url(/img/nasa-6-logo-svgrepo-com.svg);   
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+  }
+  .spinner {
+     width: 130px;
+    height: 130px; 
+    top: -115%;
+    left: -1%;
+  }
+
+
+  .carrousel {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    background-color: rgba(24, 24, 24, 1);
+    height: 22rem;
+  }
+
+  .cards {
+    width: 200%;
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.1s, ease;
+    transform: translateX(25%);
+  }
+  
+  .card {
+    margin: 1%;
+    width: calc(100% / 4);
+    background-color: rgba(25, 0, 97, 1);
+    height: 20rem;
+    border-radius: 3%;
+  }
+  
+  .card img {
+    max-width: 15rem;
+    height: 40%;
+    border-radius: 3% 3% 0% 0%;
+  }
+  
+  .carrousel button {
+    background-color: rgba(237, 237, 237, 1);
+    border: 0ch;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+  }
+  .carrousel .next{
+    left: 94%;
+  }
+  .carrousel .prev{
+    right: 95.5%;
+  }
+
+}
+
+/*Pagina Game*/
 
 .game {
   justify-content: center;
@@ -479,7 +627,7 @@ article.hades-text {
 }
 
 
-/*/////////////*/
+/*Pagina hades*/
 
 .main-part {
   display: flex;
