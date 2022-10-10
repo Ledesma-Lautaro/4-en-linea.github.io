@@ -7,7 +7,7 @@ function progressTime() {
 
 
 function progressNumber() {
-    console.log("pasa por la")
+    
     if (contador < 100) {
         contador++;
         percentage.innerHTML = contador + "%";
