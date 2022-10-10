@@ -124,6 +124,7 @@ table {
 }
 
 body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: rgba(24, 24, 24, 1);
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -133,6 +134,7 @@ body {
 }
 
 main {
+  
   
   display: flex;
   flex-direction: column;
@@ -360,6 +362,85 @@ section.hades {
   background-color: rgba(25, 0, 97, 1);
   height: 12rem;
   border-radius: 3%;
+}
+
+.titulo{
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-size: 100% auto;
+  margin-top:1rem;
+}
+
+.buy-section{
+  display: flex;
+  justify-content: space-around;
+}
+
+.buy-btn{
+  background: none;
+  width: 60%;
+  text-align: center;
+  padding: 0.5rem;
+  margin:0.8rem;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  position: relative;
+  display: block;
+}
+
+.buy-container{
+  display: flex;
+  justify-content: center;
+}
+
+.card a {
+  color:rgba(237, 237, 237, 1); ;
+}
+
+.price{
+  color: rgba(240, 195, 0, 1);
+  align-items: flex-start;
+}
+
+.cart{
+  display: block;
+  justify-content: right;
+  filter: invert(65%) sepia(80%) saturate(1584%) hue-rotate(11deg) brightness(104%) contrast(113%);
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.buy-btn:hover {
+  animation: bounce 1s;
+}
+
+
+.buy-btn:hover {
+  background-color:rgba(92, 39, 252, 1); 
+}
+
+
+
+
+@media only screen and (min-width: 660px) {
+  .buy-section{
+    margin-top: 20%;
+  }
 }
 
 .card img {
