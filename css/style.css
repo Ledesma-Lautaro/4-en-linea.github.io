@@ -134,13 +134,19 @@ body {
 }
 
 main {
-  
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   grid-column: 1/5;
+}
+
+h2{
+  color: rgba(237, 237, 237, 1);
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
 /* header */
@@ -166,7 +172,7 @@ nav .profile {
 }
 
 .logo img {
-  width: 4rem;
+  width: 3rem;
 }
 
 /* footer */
@@ -189,9 +195,17 @@ footer {
   margin-top: 5rem;
 }
 
+footer p{
+  font-size: 1rem;
+}
+
+footer a p{
+  font-size: 0.8rem;
+}
+
 footer div .about-us a img {
   margin: 2rem 1rem 0.1rem;
-  width: 1.5rem;
+  width: 1rem;
 }
 
 footer div .about-us {
@@ -478,6 +492,14 @@ left: 86%;
     visibility: visible;
   }
 
+  .footer p {
+    font-size: 1rem;
+  }
+
+  .footer a p{
+    font-size: 1rem;
+  }
+
   .preloader{
     clip-path: circle(106.1% at 50% 6%);
   }
@@ -505,12 +527,13 @@ left: 86%;
   .hades-text{
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .carrousel {
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 1100px ;
     background-color: rgba(24, 24, 24, 1);
     height: 22rem;
   }
