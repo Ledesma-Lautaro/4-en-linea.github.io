@@ -317,32 +317,7 @@ footer .aside-footer nav {
   }
 /* index, presentacion juego */
 
-.hades {
-  justify-content: center;
-  align-items: center;
-  margin: 5% 10% 10%;
-  border-radius: 15px;
-}
 
-.hades img {
-  width: 100%;
-  border-radius: 0px 0px 15px 15px;
-}
-
-.hades .hades-text {
-  background-color: rgba(227, 0, 36, 1);
-  border-radius: 15px 15px 0px 0px;
-  height: 6rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 1);
-}
-
-section.hades {
-  width: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-}
 
 /* carrousel */
 .contenedor{
@@ -524,7 +499,8 @@ left: 86%;
   .hades-text h3{
     font-size: 2rem;
   }
-  .hades-text{
+
+  .hades-text1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -533,7 +509,7 @@ left: 86%;
   .carrousel {
     display: flex;
     justify-content: center;
-    width: 1100px ;
+    width: 1120px ;
     background-color: rgba(24, 24, 24, 1);
     height: 22rem;
   }
@@ -778,6 +754,7 @@ left: 86%;
 }
 .second-part {
   display: flex;
+  align-items: center;
   flex-direction: column;
   background: url("\\img/green-hades.png");
   background-repeat: no-repeat;
@@ -818,9 +795,89 @@ a {
   text-decoration: none;
 }
 
+.hades {
+  justify-content: center;
+  align-items: center;
+  margin: 5% 10% 10%;
+  border-radius: 15px;
+}
+
+.hades img {
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.hades .hades-text {
+  background-color: rgba(227, 0, 36, 1);
+  border-radius: 15px 15px 0px 0px;
+  height: 6rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+section.hades {
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.carrousel-hades{
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+.cards-hades{ 
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 1rem;
+}
+
+.card-hades{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  overflow: hidden;
+  border: solid  rgba(240, 195, 0, 1);
+  border-radius:150px;
+  background-color:  rgba(240, 195, 0, 0.1);
+}
+
+.card-hades img{
+  width: 14rem;
+  height: 18rem;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar{
+  width: 1rem;
+}
+
+
+::-webkit-scrollbar-track {
+  background: rgba(240, 195, 0, 0.5);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: rgba(240, 195, 0, 1);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(240, 195, 0, 0.6);
+}
+
 .third-part {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: url("\\img/red-hades.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -828,3 +885,30 @@ a {
   background-size: cover;
   width: 100%;
 }
+
+.history-container{
+  display: flex;
+  width: 90%;
+  background-color: rgba(16, 16, 16, 1);
+  border-radius: 20px;
+
+}
+
+.history{
+  display: flex;
+  flex-direction: row nowrap;
+  align-items: center;
+}
+
+.history-img{
+  width: 100%;
+}
+
+.history-img img{
+  width: 100%;
+}
+.text-container{
+  width: 90%;
+  padding: 2rem;
+}
+
