@@ -10,19 +10,70 @@
   <body>
     <header class="header">
       <nav>
-        <div class="icon-white">
-          <img src="img/hamburger-menu-svgrepo-com.svg" alt="">
-        </div>
+        <a href="#">
+          <div class="round-btn" id="ham-btn">
+            <img class="icon-white" src="img/hamburger-menu-svgrepo-com.svg" alt="">
+          </div>
+        </a>
         <div class="logo">
           <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
         </div>
-        <div class="icon-white">
-          <img src="img/profile.svg" alt="">
+        <div class="round-btn">
+          <img class="icon-white" src="img/profile.svg" alt="">
         </div>
+      </nav>
+
+      <nav class="hamburguer-menu">
+        <a href="#">
+          <div>
+            <img class="cross" id="close" src="img/cross-svgrepo-com.svg" alt="">
+          </div>
+        </a>
+        <h1>Menu</h1>
+        <ul class="categorias">
+          <li >
+            <form action=""><input placeholder="Buscar..." class="search" type="text"></form>
+          </li>
+          <li>
+            <a href="">
+              <img src="" alt="">
+              <h2>Categorias</h2>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="" alt="">
+              <h2>Tendencias</h2>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="" alt="">
+              <h2>Mas jugados</h2>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="" alt="">
+              <h2>Recientes</h2>
+            </a>
+          </li>
+        </ul>
+        <ul class="redes">
+          <li class="round-btn">
+            <img  class="icon-white"src="img/youtube-svgrepo-com.svg" alt="">
+          </li>
+          <li class="round-btn">
+            <img class="icon-white" src="img/instagram-svgrepo-com (1).svg" alt="">
+          </li>
+          <li class="round-btn">
+            <img class="icon-white" src="img/facebook-svgrepo-com.svg" alt="">
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="main">
 
       <div class="preloader">
         <div class="animated-logo">
@@ -771,4 +822,5 @@
   </body>
   <script type="text/javascript" src="js/carrousel.js"></script>
   <script type="text/javascript" src="js/preloader.js"></script>
+  <script type="text/javascript" src="js/menus.js"></script>
 </html>
