@@ -191,13 +191,13 @@ nav .profile {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 15%;
+  width: 100%;
   top: 0;
   left: 0;
   height: 100%;
-  padding: 4rem;
   background-color: rgba(92, 39, 252, 1);
   z-index: 10;
+  padding-top: 5%;
 }
 
 .hamburguer-menu h1{
@@ -219,26 +219,32 @@ nav .profile {
   flex-direction: column;
   position: fixed;
   background-color: rgba(92, 39, 252, 1);
-  width: 20%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   right: 0px;
   top: 0;
   z-index: 10;
-  border-radius: 0px 0px 0px 15px;
+}
+
+.cross{
+  width: 40%;
+  justify-content: right;
+}
+
+.profile-menu ul {
+  justify-content: center;
+  margin-left: 25%;
 }
 
 .profile-menu ul a li{
   display: flex;
-  
-}
-
-.profile-menu ul{
-justify-content: left;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .profile-menu ul a li img{
-  display: block;
-  margin: auto;
+  width: 10%;
+  margin: 1rem;
 }
 
 
@@ -287,15 +293,20 @@ input{
 
 .redes{
   border-top: 1px solid;
-  display: flex;
-  justify-content: space-between;
-  width: 100% auto;
-  margin-top: 15rem;
+  width: 60%;
+}
+
+.redes li img{
+  width: 20%;
+  display: block;
+  margin: auto;
 }
 
 .redes li{
   margin: 1rem;
+  justify-content: center;
 }
+
 
 .show{
   visibility: visible;
@@ -305,22 +316,100 @@ input{
   filter: blur(2px);
 }
 
-@media only screen and (max-width: 660px){
+@media only screen and (min-width: 660px){
   .hamburguer-menu{
-    width:75%;
-    align-items: center;
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 15%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 4rem;
+    background-color: rgba(92, 39, 252, 1);
+    z-index: 10;
   }
   
-  .redes{
-    width: 100%;
-    margin: 1rem;
+  .hamburguer-menu h1{
+    padding: 2rem;
+    font-size: 2rem;
   }
-  .redes img{
-    width: 50%;
+  
+  .buscar{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 1rem;
+  }
+  
+  
+  .profile-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(92, 39, 252, 1);
+    width: 20%;
+    height: auto;
+    right: 0px;
+    top: 0;
+    z-index: 10;
+    border-radius: 0px 0px 0px 15px;
+  }
+  
+  .profile-menu ul a li{
+    display: flex;
+    
+  }
+  
+  .profile-menu ul{
+    margin-left: auto;
+  }
+  
+  .profile-menu ul a li img{
+    display: block;
+    margin: auto;
+  }
+  
+  
+  .user{
+    text-align: center;
+  }
+  
+  .profile-section{
+    align-items: center;
+    border-bottom: solid 1px;
+  }
+  
+  .profile-pic{
+    width: 2rem;
+    height: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+  
+  }
+  
+  .profile-pic img{
+    display: block;
+    margin: auto;
+  
+  }
+  
+  .profile-section{
+    display: flex;
   }
 
-  .profile-menu{
-    width: 100%;
+  
+  .redes{
+    margin-top: 10rem;
+  }
+  
+  .redes li{
+    margin: 1rem;
+  }
+
+  .redes li img{
+    width: 30%;
   }
   
 }
