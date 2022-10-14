@@ -227,13 +227,14 @@ nav .profile {
 }
 
 .cross{
-  width: 40%;
-  justify-content: right;
+  width: 30%;
+  display: block;
+  margin: auto;
 }
 
-.profile-menu ul {
-  justify-content: center;
-  margin-left: 25%;
+.lista-perfil{
+  margin-left: 30%;
+  align-items: center;
 }
 
 .profile-menu ul a li{
@@ -411,7 +412,8 @@ input{
   .redes li img{
     width: 30%;
   }
-  
+
+
 }
 
 /* footer */
@@ -468,7 +470,7 @@ footer .aside-footer nav {
 }
 
 /* preloader */
-  .preloader{
+ /* .preloader{
     background-color: rgba(17, 0, 65, 1);
     z-index: 10;
     width: 100%;
@@ -615,9 +617,7 @@ footer .aside-footer nav {
   height: 12rem;
   border-radius: 3%;
 }
-.card img{
-  max-width: 100%;
-}
+
 
 
 .titulo{
@@ -690,16 +690,8 @@ footer .aside-footer nav {
 }
 
 
-
-
-@media only screen and (min-width: 660px) {
-  .buy-section{
-    margin-top: 20%;
-  }
-}
-
 .card img {
-  max-width: 8rem;
+  max-width: 100%;
   border-radius: 3% 3% 0% 0%;
 }
 
@@ -724,6 +716,10 @@ left: 86%;
 /* termina carrousel */
 /* termina mobile */
 @media only screen and (min-width: 660px){
+
+  .buy-section{
+    margin-top: 20%;
+  }
 
   .footer-text{
     visibility: hidden;
@@ -811,10 +807,10 @@ left: 86%;
   }
   
   .card img {
-    max-width: 12rem;
+    max-width: 14rem;
     height: 40%;
     border-radius: 3% 3% 0% 0%;
-    object-fit: fill;
+    object-fit: cover;
   }
   
   .carrousel button {
