@@ -17,7 +17,12 @@ document.querySelector("#ham-btn").addEventListener('click',() =>{
     }
 })
 
-
+cross.addEventListener('click', () =>{
+    if(leftMenu.classList.contains('show')){
+        leftMenu.classList.remove('show')
+        main.classList.remove('blur')
+    }
+})
 
 document.querySelector('#profile-btn').addEventListener('click',() =>{
 

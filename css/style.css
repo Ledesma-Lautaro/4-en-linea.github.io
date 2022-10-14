@@ -305,6 +305,26 @@ input{
   filter: blur(2px);
 }
 
+@media only screen and (max-width: 660px){
+  .hamburguer-menu{
+    width:75%;
+    align-items: center;
+  }
+  
+  .redes{
+    width: 100%;
+    margin: 1rem;
+  }
+  .redes img{
+    width: 50%;
+  }
+
+  .profile-menu{
+    width: 100%;
+  }
+  
+}
+
 /* footer */
 
 footer .aside-footer{
