@@ -663,7 +663,6 @@ footer .aside-footer nav {
   justify-content: right;
   filter: invert(65%) sepia(80%) saturate(1584%) hue-rotate(11deg) brightness(104%) contrast(113%);
 }
-
 @keyframes bounce {
   0%, 20%, 60%, 100% {
     -webkit-transform: translateY(0);
