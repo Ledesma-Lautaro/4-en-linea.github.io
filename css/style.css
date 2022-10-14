@@ -811,9 +811,10 @@ left: 86%;
   }
   
   .card img {
-    max-width: 14rem;
+    max-width: 12rem;
     height: 40%;
     border-radius: 3% 3% 0% 0%;
+    object-fit: fill;
   }
   
   .carrousel button {
