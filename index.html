@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NasaGames</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   </head>
   <body>
     <header class="header">
@@ -15,23 +16,21 @@
             <img class="icon-white" src="img/hamburger-menu-svgrepo-com.svg" alt="">
           </div>
         </a>
+        <a href="index.html">
         <div class="logo">
-          <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
-        </div>
-        <div class="round-btn">
+            <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
+          </div>
+        </a>
+        <div class="round-btn" id="profile-btn">
           <img class="icon-white" src="img/profile.svg" alt="">
         </div>
       </nav>
 
       <nav class="hamburguer-menu">
-        <a href="#">
-          <div>
-            <img class="cross" id="close" src="img/cross-svgrepo-com.svg" alt="">
-          </div>
-        </a>
+        <img src="img/cross-svgrepo-com.svg" class="cross" alt="">
         <h1>Menu</h1>
         <ul class="categorias">
-          <li >
+          <li class="buscar">
             <form action=""><input placeholder="Buscar..." class="search" type="text"></form>
           </li>
           <li>
@@ -70,6 +69,55 @@
             <img class="icon-white" src="img/facebook-svgrepo-com.svg" alt="">
           </li>
         </ul>
+      </nav>
+
+      <nav class="profile-menu">
+        <div class="profile-section">
+          <div class="round-btn profile-pic">
+            <img src="img/profile.svg" alt="" class=" icon-white" >
+          </div>
+          <div class="user">
+          
+              <h2>Nombre de usuario</h2>
+
+            <a href="#">
+              <p>Administrar perfil</p>
+            </a>
+          </div>
+        </div>
+        <ul>
+          <a href="#">
+          <li>
+                <img class="icon-white" src="img/profile.svg" alt="">
+              <h2>Mi perfil</h2>
+            </li>
+          </a>
+          <a href="#">
+          <li>
+              <img class="icon-white" src="img/medal-svgrepo-com.svg" alt="">
+              <h2>Logros</h2>
+            </li>
+          </a>
+          <a href="#">
+          <li>
+              <img class="icon-white" src="img/group-svgrepo-com.svg" alt="">
+              <h2>Amigos</h2>
+            </li>
+          </a>
+          <a href="#">
+          <li>
+              <img class="icon-white" src="img/cart-4-svgrepo-com.svg" alt="">
+              <h2>Carrito</h2>
+            </li>
+          </a>
+        </ul>
+
+        <div class="close-session">
+          <a href="#" >
+            <img src="" alt="">
+            <h2>Cerrar sesion</h2>
+          </a>
+        </div>
       </nav>
     </header>
 

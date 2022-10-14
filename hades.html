@@ -3,26 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hades</title>
 </head>
 <body>
-    <header class="header">
-        <nav>
-          <div class="icon-white">
-            <img src="img/hamburger-menu-svgrepo-com.svg" alt="">
-          </div>
-          <div class="logo">
-            <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
-          </div>
-          <div class="icon-white">
-            <img src="img/profile.svg" alt="">
-          </div>
-        </nav>
-      </header>
+  <header class="header">
+    <nav>
+      <a href="#">
+        <div class="round-btn" id="ham-btn">
+          <img class="icon-white" src="img/hamburger-menu-svgrepo-com.svg" alt="">
+        </div>
+      </a>
+      <a href="index.html">
+      <div class="logo">
+          <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
+        </div>
+      </a>
+      <div class="round-btn" id="profile-btn">
+        <img class="icon-white" src="img/profile.svg" alt="">
+      </div>
+    </nav>
 
-      <main>
+    <nav class="hamburguer-menu">
+
+      <h1>Menu</h1>
+      <ul class="categorias">
+        <li class="buscar">
+          <form action=""><input placeholder="Buscar..." class="search" type="text"></form>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Categorias</h2>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Tendencias</h2>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Mas jugados</h2>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Recientes</h2>
+          </a>
+        </li>
+      </ul>
+      <ul class="redes">
+        <li class="round-btn">
+          <img  class="icon-white"src="img/youtube-svgrepo-com.svg" alt="">
+        </li>
+        <li class="round-btn">
+          <img class="icon-white" src="img/instagram-svgrepo-com (1).svg" alt="">
+        </li>
+        <li class="round-btn">
+          <img class="icon-white" src="img/facebook-svgrepo-com.svg" alt="">
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="profile-menu">
+      <div class="profile-section">
+        <div class="round-btn profile-pic">
+          <img src="img/profile.svg" alt="" class=" icon-white" >
+        </div>
+        <div class="user">
+        
+            <h2>Nombre de usuario</h2>
+
+          <a href="#">
+            <p>Administrar perfil</p>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <a href="#">
+        <li>
+              <img class="icon-white" src="img/profile.svg" alt="">
+
+            <h2>Mi perfil</h2>
+          </li>
+        </a>
+        <a href="#">
+        <li>
+            <img class="icon-white" src="img/medal-svgrepo-com.svg" alt="">
+            <h2>Logros</h2>
+          </li>
+        </a>
+        <a href="#">
+        <li>
+            <img class="icon-white" src="img/group-svgrepo-com.svg" alt="">
+            <h2>Amigos</h2>
+          </li>
+        </a>
+        <a href="#">
+        <li>
+            <img class="icon-white" src="img/cart-4-svgrepo-com.svg" alt="">
+            <h2>Carrito</h2>
+          </li>
+        </a>
+      </ul>
+
+      <div class="close-session">
+        <a href="#" >
+          <img src="" alt="">
+          <h2>Cerrar sesion</h2>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+
+
+      <main class="main">
         
              <article class="main-part">
 
@@ -164,6 +267,68 @@
                     </section>
                 </article>
 
+                <article class="fourth-part hades-text ">
+                  <h2>Demuestra que eres un dios</h2>
+                
+                  <button class="precompra hades-text">¡Precompra ahora</button>
+
+
+
+                    <section class="features">
+                      <ul class="solapas">
+                        <a  href="#">
+                          <li class="selected" id="caracteristicas" >
+                            <h3>Caracteristicas</h3>
+                          </li>
+                        </a>
+                        <a href="#">
+                          <li class="deselected" id="requisitos">
+                            <h3>Requisitos</h3>
+                          </li>
+                        </a>
+                        <a href="#">
+                          <li class="deselected" id="idiomas">
+                            <h3>Idiomas</h3>
+                          </li>
+                        </a>
+                      </ul>
+                      <div class="features-text">
+                          <ul>
+                            <li>
+                              <img class="icon-white" src="img/profile.svg" alt="">
+                              <p>Un jugador</p>
+                            </li>
+                            <li>
+                              <img class="icon-white" src="img/game-controller-svgrepo-com.svg" alt="">
+                              <p>Compatible con mando</p>
+                            </li>
+                            <li>
+                              <img class="icon-white" src="img/cc-svgrepo-com.svg" alt="">
+                              <p>Subtitulos</p>
+                            </li>
+                            <li>
+                              <img class="icon-white" src="img/clouds-svgrepo-com.svg" alt="">
+                              <p>Sinc. con la nube</p>
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <img class="icon-white" src="img/laptop-signal-svgrepo-com.svg" alt="">
+                              <p>Remote play en tableta</p>
+                            </li>
+                            <li>
+                              <img class="icon-white" src="img/laptop-signal-svgrepo-com.svg" alt="">
+                              <p>Remote play en movil</p>
+                            </li>
+                            <li>
+                              <img class="icon-white" src="img/laptop-signal-svgrepo-com.svg" alt="">
+                              <p>Remote play en TV</p>
+                            </li>
+                          </ul>
+                      </div>
+                    </section>
+                </article>
+
 
 
 
@@ -207,5 +372,9 @@
     
 
 </body>
+
 <script type="text/javascript" src="js/carrousel.js"></script>
+<script type="text/javascript" src="js/menus.js"></script>
+<script type="text/javascript" src="js/solapas.js"></script>
+
 </html>

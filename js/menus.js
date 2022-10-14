@@ -1,6 +1,6 @@
 "use strict"
 
-
+let rightMenu = document.querySelector('.profile-menu');
 let leftMenu = document.querySelector(".hamburguer-menu");
 let main = document.querySelector(".main");
 let cross = document.querySelector(".cross")
@@ -13,12 +13,31 @@ document.querySelector("#ham-btn").addEventListener('click',() =>{
     leftMenu.classList.remove('show') ;       
     }else{
         leftMenu.classList.add('show');
-
         main.classList.add('blur');
     }
 })
 
-document.querySelector("#close").addEventListener('click', () =>{
-    leftMenu.classList.remove('show');
-    main.classList.remove('blur');
+cross.addEventListener('click', () =>{
+    if(leftMenu.classList.contains('show')){
+        leftMenu.classList.remove('show')
+        main.classList.remove('blur')
+    }
+})
+
+document.querySelector('#profile-btn').addEventListener('click',() =>{
+
+    if(rightMenu.classList.contains('show')){
+        rightMenu.classList.remove('show')
+    }else{
+        rightMenu.classList.add('show')
+        main.classList.add('blur');
+    }
+})
+
+main.addEventListener('click', () =>{
+    if(rightMenu.classList.contains('show') | leftMenu.classList.contains('show')){
+        leftMenu.classList.remove('show')
+        rightMenu.classList.remove('show')
+        main.classList.remove('blur')
+    }
 })

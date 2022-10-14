@@ -4,26 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>4 en linea</title>
 </head>
 <body>
 
   <header class="header">
     <nav>
-      <div class="icon-white">
-        <img src="img/hamburger-menu-svgrepo-com.svg" alt="">
-      </div>
+      <a href="#">
+        <div class="round-btn" id="ham-btn">
+          <img class="icon-white" src="img/hamburger-menu-svgrepo-com.svg" alt="">
+        </div>
+      </a>
+      <a href="index.html">
       <div class="logo">
-        <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
+          <img src="img/nasa-6-logo-svgrepo-com.svg" alt="" />
+        </div>
+      </a>
+      <div class="round-btn" id="profile-btn">
+        <img class="icon-white" src="img/profile.svg" alt="">
       </div>
-      <div class="icon-white">
-        <img src="img/profile.svg" alt="">
+    </nav>
+
+    <nav class="hamburguer-menu">
+
+      <h1>Menu</h1>
+      <ul class="categorias">
+        <li class="buscar">
+          <form action=""><input placeholder="Buscar..." class="search" type="text"></form>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Categorias</h2>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Tendencias</h2>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Mas jugados</h2>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="" alt="">
+            <h2>Recientes</h2>
+          </a>
+        </li>
+      </ul>
+      <ul class="redes">
+        <li class="round-btn">
+          <img  class="icon-white"src="img/youtube-svgrepo-com.svg" alt="">
+        </li>
+        <li class="round-btn">
+          <img class="icon-white" src="img/instagram-svgrepo-com (1).svg" alt="">
+        </li>
+        <li class="round-btn">
+          <img class="icon-white" src="img/facebook-svgrepo-com.svg" alt="">
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="profile-menu">
+      <div class="profile-section">
+        <div class="round-btn profile-pic">
+          <img src="img/profile.svg" alt="" class=" icon-white" >
+        </div>
+        <div class="user">
+        
+            <h2>Nombre de usuario</h2>
+
+          <a href="#">
+            <p>Administrar perfil</p>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <a href="#">
+        <li>
+              <img class="icon-white" src="img/profile.svg" alt="">
+
+            <h2>Mi perfil</h2>
+          </li>
+        </a>
+        <a href="#">
+        <li>
+            <img class="icon-white" src="img/medal-svgrepo-com.svg" alt="">
+            <h2>Logros</h2>
+          </li>
+        </a>
+        <a href="#">
+        <li>
+            <img class="icon-white" src="img/group-svgrepo-com.svg" alt="">
+            <h2>Amigos</h2>
+          </li>
+        </a>
+        <a href="#">
+        <li>
+            <img class="icon-white" src="img/cart-4-svgrepo-com.svg" alt="">
+            <h2>Carrito</h2>
+          </li>
+        </a>
+      </ul>
+
+      <div class="close-session">
+        <a href="#" >
+          <img src="" alt="">
+          <h2>Cerrar sesion</h2>
+        </a>
       </div>
     </nav>
   </header>
 
-    <main>
+
+    <main class="main">
 
       <div class="breadcrumbs">
         <a href="index.html"><h1>Inicio</a>/Videojuego</h1>
@@ -178,4 +279,9 @@
     </footer>
     
 </body>
+
+<script type="text/javascript" src="js/carrousel.js"></script>
+<script type="text/javascript" src="js/preloader.js"></script>
+<script type="text/javascript" src="js/menus.js"></script>
+
 </html>
