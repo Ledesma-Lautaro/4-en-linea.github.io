@@ -35,10 +35,6 @@ for (let a = 0; a < nextbuttons.length; a++) {
                     card.classList.remove("card4")
                     card.classList.add("card5")
                 }
-                else if(card.classList.contains("card5")){
-                    card.classList.remove("card5")
-                    card.classList.add("card6")
-                }
         }
     }
     );
@@ -76,10 +72,6 @@ for (let a = 0; a < prevbuttons.length; a++) {
             else if(card.classList.contains("card5")){
                 card.classList.remove("card5")
                 card.classList.add("card4")
-            }
-            else if(card.classList.contains("card6")){
-                card.classList.remove("card6")
-                card.classList.add("card5")
             }
         }
     }

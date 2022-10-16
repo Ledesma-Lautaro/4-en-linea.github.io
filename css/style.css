@@ -139,6 +139,7 @@ main {
   align-items: center;
   justify-content: center;
   grid-column: 1/5;
+  overflow-x: hidden;
 }
 
 h2{
@@ -174,7 +175,7 @@ nav .profile {
 }
 
 .logo img {
-  width: 3rem;
+  width: 3.5rem;
 }
 
 .round-btn{
@@ -234,6 +235,11 @@ nav .profile {
 .profile-menu ul {
   justify-content: center;
   margin-left: 25%;
+}
+
+.profile-menu .close-button{
+  display: flex;
+  justify-content: center;
 }
 
 .profile-menu ul a li{
@@ -326,10 +332,11 @@ input{
     width: 15%;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 90%;
     padding: 4rem;
     background-color: rgba(92, 39, 252, 1);
     z-index: 10;
+    border-radius: 15px 15px 15px 15px;
   }
   
   .hamburguer-menu h1{
@@ -343,6 +350,10 @@ input{
     padding: 1rem;
   }
   
+  .close-button{
+    display: flex;
+    justify-content: center;
+  }
   
   .profile-menu{
     display: flex;
@@ -350,30 +361,34 @@ input{
     position: fixed;
     background-color: rgba(92, 39, 252, 1);
     width: 20%;
-    height: auto;
+    height: 90%;
     right: 0px;
     top: 0;
     z-index: 10;
-    border-radius: 0px 0px 0px 15px;
+    border-radius: 15px 15px 15px 15px;
+    align-items: center;
+    margin-top: 0.25%;
   }
   
-  .profile-menu ul a li{
-    display: flex;
-    
-  }
-  
-  .profile-menu ul{
-    margin-left: auto;
-  }
   
   .profile-menu ul a li img{
     display: block;
-    margin: auto;
+    margin: 10%;
+    width: 15%;
   }
   
+  .profile-menu ul{
+    margin-left: 10%;
+  }
+
+  .close-session{
+   padding-bottom: 0;
+   margin-bottom: 1rem;
+  }
   
   .user{
     text-align: center;
+    margin-bottom: 5%;
   }
   
   .profile-section{
@@ -382,24 +397,13 @@ input{
   }
   
   .profile-pic{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     padding: 1rem;
     margin: 1rem;
-  
-  }
-  
-  .profile-pic img{
-    display: block;
-    margin: auto;
-  
-  }
-  
-  .profile-section{
-    display: flex;
+    margin-bottom: 2rem;
   }
 
-  
   .redes{
     margin-top: 10rem;
   }
@@ -587,15 +591,15 @@ footer .aside-footer nav {
 }
 
 .card2{
-  transform: translateX(-39.5%);
+  transform: translateX(-38.5%);
 }
 
 .card3{
-  transform: translateX(-79%);
+  transform: translateX(-84%);
 }
 
 .card4{
-  transform: translateX(-118.5%);
+  transform: translateX(-126.5%);
 }
 
 
@@ -603,28 +607,23 @@ footer .aside-footer nav {
   transform: translateX(-158%);
 }
 
-.card6{
-  transform: translateX(-197.5%);
-}
-
 
 .card {
   margin: 3%;
   width: calc(100% / 6);
   background-color: rgba(25, 0, 97, 1);
-  height: 12rem;
+  height: 14rem;
   border-radius: 3%;
 }
-.card img{
+.card .videogame{
   max-width: 100%;
 }
-
 
 .titulo{
   color: rgba(255, 255, 255, 1);
   text-align: center;
   font-size: 100% auto;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
 
 .buy-section{
@@ -693,14 +692,15 @@ footer .aside-footer nav {
 
 
 @media only screen and (min-width: 660px) {
+  
+  .categories{
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
   .buy-section{
     margin-top: 20%;
   }
-}
-
-.card img {
-  max-width: 8rem;
-  border-radius: 3% 3% 0% 0%;
 }
 
  .carrousel button {
@@ -731,10 +731,6 @@ left: 86%;
   .footer-text::after{
     content: "¡Olvídate del aburrimiento con NasaGames! La mayor selección de juegos está aquí, para que lleves la diversión al siguiente nivel. Juega online y sin preocupaciones: puedes jugar a todos nuestros juegos sin descargar.¡Pero cuidado! Nuestros juegos de acción solo son aptos para los más atrevidos; competirás con grandes pilotos en nuestros  juegos de carreras; y sólo los auténticos exploradores llegarán a su meta en los juegos de aventura. Y para los clásicos, las versiones clásicas y no tan clásicas de los clásicos juegos de mesa. ¡Esperamos que lo disfrutes!";
     visibility: visible;
-  }
-
-  .footer p {
-    font-size: 1rem;
   }
 
   .footer a p{
@@ -770,13 +766,12 @@ left: 86%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
   }
 
   .carrousel {
     display: flex;
     justify-content: center;
-    width: 90% ;
+    width: 1230px ;
     background-color: rgba(24, 24, 24, 1);
     height: 22rem;
   }
@@ -791,7 +786,7 @@ left: 86%;
   }
   
   .card1{
-    transform: translateX(29%);
+    transform: translateX(25%);
   }
 
   .card2{
@@ -804,17 +799,18 @@ left: 86%;
 
   .card {
     margin: 1%;
-    width: calc(100% / 12);
+    width: 8.9%;
     background-color: rgba(25, 0, 97, 1);
     height: 20rem;
     border-radius: 3%;
   }
   
-  .card img {
-    max-width: 12rem;
+  .card .videogame {
+    width: 200px;
     height: 40%;
     border-radius: 3% 3% 0% 0%;
     object-fit: fill;
+    max-width: none;
   }
   
   .carrousel button {
@@ -1016,6 +1012,47 @@ left: 86%;
   border-radius: 15px;
 }
 
+.carrousel-spiderman{
+  width: 80%;
+  display:block;
+  overflow:hidden;
+}
+.cards-spiderman{
+  display:block;
+  width: 90%;
+  /* height: 200px; */
+  background: transparent;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px;
+  margin: 0;
+  white-space: nowrap; 
+}
+
+.card-spiderman{
+  display: inline-block;
+  width: 200px;
+  margin: 0 5px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.05) no-repeat center center;
+}
+.card-spiderman img{
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+}
+
+.play-button {
+  margin: 0 auto;
+  position: relative; 
+  top: 70%; 
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 2.5em 0 2.5em 5em;
+  border-color: transparent transparent transparent #000;
+  opacity: .75; 
+}
 
 /*Pagina hades*/
 
@@ -1087,6 +1124,8 @@ a {
 }
 
 .hades .hades-text1 {
+  padding-top: 1rem;
+  text-align: center;
   background-color: rgba(227, 0, 36, 1);
   border-radius: 15px 15px 0px 0px;
   height: 6rem;
