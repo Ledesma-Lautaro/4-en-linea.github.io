@@ -1233,7 +1233,9 @@ section.hades {
   display: block;
 }
 
-.card-hades2 .weapons, .weapon-img, .weapon-title, .weapon-text, .weapon-img{
+
+/* ocultando todo de la card 2 */
+.card-hades1 .weapons, .card-hades1 .weapon-img, .card-hades1 .weapon-title h2, .card-hades1 .weapon-text p, .card-hades1 .weapons-img, .card-hades1 .weapon-hades-img img{
 display: none;
 }
 
@@ -1241,32 +1243,31 @@ display: none;
 
 /* card 2 de hades */
 
-.card-hades2 .text-container{
+.card-hades2 .text-container, .card-hades2 #history-title, .card-hades2 .history-img{
   display: none;
 }
 
-.card-hades2 .weapons, .weapon-img, .weapon-title, .weapon-text, .weapon-img{
+.card-hades2 .weapons, .card-hades2 .weapon-img, .card-hades2 .weapon-title h2, .card-hades2 .weapon-text p, .card-hades2 .weapons-img, .card-hades2 .weapon-hades-img img{
   display: block;
-}
+  }
   
-.card-hades2 .weapon-img {
+.card-hades2 .weapon-hades-img {
   display: block;
   width: 100%;
   height: 400px;
 } 
 
-.card-hades2 .weapon-img img{
-  width: 50%;
-  height: 400px;
+.card-hades2 .weapon-hades-img img{
+  width: 100%;
+  height: 450px;
   object-fit: fill;
 }
 
-.card-hades2 .history-img{
-  display: none;
-}
-
-.card-hades2 #history-title{
-  display: none;
+.card-hades2 .weapons-img img{
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+  margin-top: 3rem;
 }
 
 .card-hades2 .weapons{
@@ -1274,21 +1275,14 @@ display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
 
 .card-hades2 .weapon-title{
   color: rgba(240, 195, 0, 1);
 }
 
-.card-hades2 .weapon-img{
-  width: 100%;
-  height: 400px;
-}
-.card-hades2 .weapon-img img{
-  width: 100%;
-  height: 400px;
-  object-fit: fill;
-}
+
 
 
 
