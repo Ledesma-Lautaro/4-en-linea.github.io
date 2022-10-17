@@ -474,7 +474,7 @@ footer .aside-footer nav {
 }
 
 /* preloader */
- /* .preloader{
+  .preloader{
     background-color: rgba(17, 0, 65, 1);
     z-index: 10;
     width: 100%;
@@ -1208,6 +1208,7 @@ section.hades {
   background-position: center center;
   background-size: cover;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .history-container{
@@ -1215,7 +1216,132 @@ section.hades {
   width: 90%;
   background-color: rgba(16, 16, 16, 1);
   border-radius: 20px;
+  margin-top: 3rem;
+}
 
+/* card 1 de Hades */
+
+.card-hades1 .text-container{
+  display: block;
+}
+
+.card-hades1 .weapon-img{
+  display: none;
+}
+
+.card-hades1 .history-img{
+  display: block;
+}
+
+.card-hades2 .weapons, .weapon-img, .weapon-title, .weapon-text, .weapon-img{
+display: none;
+}
+
+
+
+/* card 2 de hades */
+
+.card-hades2 .text-container{
+  display: none;
+}
+
+.card-hades2 .weapons, .weapon-img, .weapon-title, .weapon-text, .weapon-img{
+  display: block;
+}
+  
+.card-hades2 .weapon-img {
+  display: block;
+  width: 100%;
+  height: 400px;
+} 
+
+.card-hades2 .weapon-img img{
+  width: 50%;
+  height: 400px;
+  object-fit: fill;
+}
+
+.card-hades2 .history-img{
+  display: none;
+}
+
+.card-hades2 #history-title{
+  display: none;
+}
+
+.card-hades2 .weapons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-hades2 .weapon-title{
+  color: rgba(240, 195, 0, 1);
+}
+
+.card-hades2 .weapon-img{
+  width: 100%;
+  height: 400px;
+}
+.card-hades2 .weapon-img img{
+  width: 100%;
+  height: 400px;
+  object-fit: fill;
+}
+
+
+
+/* animaciones */
+.slidein{
+  animation: 1s linear 5s  forwards slidein;
+}
+
+.slideout{
+  animation: 1s linear 0s forwards slideout;
+}
+
+#history-title{
+  margin-bottom: 0.5rem;
+}
+
+.button-container{
+  display: flex;
+  width: 8rem;
+  height: 3rem;
+  justify-content: space-between;
+}
+
+.hades-button{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 180%;
+  overflow: hidden;
+}
+
+.hades-button:hover{
+  border: solid 3px yellow ;
+}
+
+.hades-button img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+@keyframes slidein {
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideout {
+  to{
+    transform: translateX(-120%);
+  }
 }
 
 .history{
@@ -1233,7 +1359,8 @@ section.hades {
 }
 .text-container{
   width: 90%;
-  padding: 2rem;
+  padding-left: 3rem;
+  padding-bottom: 0.5rem;
 }
 
 
