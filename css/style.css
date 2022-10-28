@@ -1233,40 +1233,49 @@ section.hades {
   display: block;
 }
 
-.card-hades2 .weapons, .weapon-img, .weapon-title, .weapon-text, .weapon-img{
+
+/* ocultando todo de la card 2 */
+.card-hades1 .weapons, .card-hades1 .weapon-img, .card-hades1 .weapon-title h2, .card-hades1 .weapon-text p, .card-hades1 .weapons-img, .card-hades1 .weapon-hades-img img{
 display: none;
 }
+
+.card-hades1 .bendiciones, .card-hades1 .bendiciones-text, .card-hades1 .hades-guantes{
+  display: none;
+} 
 
 
 
 /* card 2 de hades */
 
-.card-hades2 .text-container{
+.card-hades2 .text-container, .card-hades2 #history-title, .card-hades2 .history-img{
   display: none;
 }
 
-.card-hades2 .weapons, .weapon-img, .weapon-title, .weapon-text, .weapon-img{
+.card-hades2 .bendiciones, .card-hades2 .bendiciones-text, .card-hades2 .hades-guantes{
+  display: none;
+} 
+
+.card-hades2 .weapons, .card-hades2 .weapon-img, .card-hades2 .weapon-title h2, .card-hades2 .weapon-text p, .card-hades2 .weapons-img, .card-hades2 .weapon-hades-img img{
   display: block;
-}
+  }
   
-.card-hades2 .weapon-img {
+.card-hades2 .weapon-hades-img {
   display: block;
   width: 100%;
   height: 400px;
 } 
 
-.card-hades2 .weapon-img img{
-  width: 50%;
-  height: 400px;
+.card-hades2 .weapon-hades-img img{
+  width: 100%;
+  height: 450px;
   object-fit: fill;
 }
 
-.card-hades2 .history-img{
-  display: none;
-}
-
-.card-hades2 #history-title{
-  display: none;
+.card-hades2 .weapons-img img{
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+  margin-top: 3rem;
 }
 
 .card-hades2 .weapons{
@@ -1274,22 +1283,62 @@ display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
 
 .card-hades2 .weapon-title{
   color: rgba(240, 195, 0, 1);
 }
 
-.card-hades2 .weapon-img{
+/* hades card 3 */
+.card-hades3 .weapons, .card-hades3 .weapon-img, .card-hades3 .weapon-title h2, .card-hades3 .weapon-text p, .card-hades3 .weapons-img, .card-hades3 .weapon-hades-img img{
+  display: none;
+  }
+  .card-hades3 .text-container p, .card-hades3 #history-title, .card-hades3 .history-img{
+    display: none;
+  }
+  
+.card-hades3 .bendiciones, .card-hades3 .hades-guantes{
+  display: block;
+}
+
+.card-hades3 .bendiciones{
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+.card-hades3 .first-line, .card-hades3 .second-line{
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+}
+
+.card-hades3 .first-line, .card-hades3 .second-line{
+  width: 100%;
+  height: 100px;
+}
+
+.card-hades3 .first-line img, .card-hades3 .second-line img{
+  width: 100%;
+  height: 100px;
+  object-fit: fill;
+}
+
+.card-hades3 .hades-guantes{
+  width: 400%;
   height: 400px;
 }
-.card-hades2 .weapon-img img{
+
+.card-hades3 .hades-guantes img{
   width: 100%;
   height: 400px;
   object-fit: fill;
 }
 
+.card-hades3 .bendiciones-text{
+  margin-bottom: 1rem;
+}
 
 
 /* animaciones */
