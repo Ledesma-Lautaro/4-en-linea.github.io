@@ -1065,7 +1065,7 @@ left: 86%;
 .main-part {
   display: flex;
   flex-direction: column;
-  background: url("\\img/main-hades.png");
+  background: url("img/main-hades.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -1077,7 +1077,7 @@ left: 86%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url("\\img/green-hades.png");
+  background: url("img/green-hades.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
