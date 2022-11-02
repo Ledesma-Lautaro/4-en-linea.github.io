@@ -847,7 +847,7 @@ left: 86%;
 .game {
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   background-color: rgba(17, 0, 65, 1);
   color: rgba(237, 237, 237, 1);
   border-radius: 20px;
