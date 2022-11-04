@@ -1,14 +1,22 @@
 
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
+let j1;
+let j2;
+let tablero;
+let isMouseDown = false
+let jugador = null;
+let rect = canvas.getBoundingClientRect();
 
 
 let jugar = document.querySelector("#jugar").addEventListener('click', init);
+
 function init(){
     console.log("Entra al init");
     createBoard();
     createJugadores();
-    // createFichas();
+    StartGame();
+    setTimer();
 };
 
 function createBoard(){
@@ -36,7 +44,7 @@ function createBoard(){
         posX = 240
     }
 
-    let tablero = new Tablero(posX, 100, ctx)
+    tablero = new Tablero(posX, 100, ctx)
     tablero.construirTablero(cantX, cantY);
 }
 
@@ -66,8 +74,8 @@ function createJugadores(){
         imgj2.src = "img/fichas/loki.jpg";
     }
 
-    let jugador1 = new Jugador("Jugador 1", imgj1, ctx);
-    let jugador2 = new Jugador("Jugador 2", imgj2, ctx);
+    j1 = new Jugador("Jugador 1", imgj1, ctx);
+    j2 = new Jugador("Jugador 2", imgj2, ctx);
 
     //4 en linea
     if(modo == 1){
@@ -81,7 +89,58 @@ function createJugadores(){
     else if(modo == 3){
         nroFichas = 72;
     }
-    jugador1.createFichas(nroFichas/2);
-    jugador2.createFichas(nroFichas/2);
+    
+    imgj1.onload = function(){
+        j1.createFichas(nroFichas/2);
+    }
+    imgj2.onload = function() {
+        j2.createFichas(nroFichas/2);
+    }
 }
+    function onMouseDown(e){
+        isMouseDown = true;
+        jugador = findClicked(e.layerX - rect.left , e.layerY - rect.top)
+    }
 
+    function onMouseUp(e){
+        isMouseDown = false;
+        jugador.setFichaClickeada(null);
+        if()
+    }
+
+    function onMouseMove(e){
+        if(isMouseDown && jugador.getFicha() != null){
+            jugador.moveFicha(e.layerX - rect.left , e.layerY - rect.top)
+            redraw();
+        }
+
+    }
+    
+    function findClicked(x, y){
+        if(j1.getTurn()){
+            j1.findClicked(x, y);
+            return j1;
+        }else{
+            j2.findClicked(x, y);
+            return j2;
+        }
+        
+    }
+
+    function redraw(){
+        ctx.clearRect(0, 0, 1200, 800)
+        tablero.redraw();
+        j1.redraw();
+        j2.redraw();
+
+
+    }
+
+    function StartGame(){
+        j1.isMyTurn();
+        //aviso en pantalla, turno jugador 1
+    }
+
+    canvas.addEventListener('mousedown', onMouseDown, false);
+    canvas.addEventListener('mouseup', onMouseUp, false);
+    canvas.addEventListener('mousemove', onMouseMove, false); 
