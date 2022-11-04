@@ -48,13 +48,32 @@ class Tablero {
         this.y = y;
     }
 
-    isInsideDrop(posx, posy){
-        drops.forEach(drop => {
-            dropX = drop.getPosX();
-            dropY = drop.getPosY();
-        
-            if()
-
+    isInsideDrop(posX, posY){
+        let returndrop = null;
+        this.drops.forEach(drop => {
+            let dropX = drop.getPosX();
+            let dropY = drop.getPosY();
+            let width = drop.getWidth();
+            let height = drop.getHeight();
+            if(!(posX < dropX ||posX > dropX + width||posY < dropY ||posY > dropY + height)){
+                returndrop = drop;
+            }
         });
+        return returndrop;
     }
+
+    getCasillero(x){
+    for (let index = 0; index < this.casilleros.length; index++) {
+        const casillero = this.casilleros[index];
+        while(casillero.getPosX() == x && casillero.isEmpty()){
+            index++;
+        }
+        return this.casilleros[index--];
+    }
+}
+
+    insertFicha(casillero, jugador){
+        casillero.setFicha(jugador);
+    }
+
 }

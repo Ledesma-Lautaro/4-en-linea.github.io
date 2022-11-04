@@ -80,10 +80,4 @@ class Jugador{
         }
     }
 
-    droppedtoken(){
-        if(this.fichaClickeada){
-            
-        }
-    }
-
 }

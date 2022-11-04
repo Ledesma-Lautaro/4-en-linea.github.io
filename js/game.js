@@ -16,6 +16,7 @@ function init(){
     createBoard();
     createJugadores();
     StartGame();
+    addEvents();
     setTimer();
 };
 
@@ -104,8 +105,22 @@ function createJugadores(){
 
     function onMouseUp(e){
         isMouseDown = false;
-        jugador.setFichaClickeada(null);
-        if()
+        
+       if(jugador.getFicha() != null){
+            let drop = tablero.isInsideDrop(e.layerX - rect.left, e.layerY-rect.top)
+            if(drop != null){
+                casillero = tablero.getCasillero(drop.getPosX());
+                tablero.insertFicha(casillero, jugador);
+                redraw();
+            }
+            else{
+                posX = jugador.getFicha().getOGPositionX();
+                posY = jugador.getFicha().getOGPositionY();
+                jugador.getFicha().setPosition(posX, posY);
+                redraw();  
+            }
+            jugador.setFichaClickeada(null);
+        }
     }
 
     function onMouseMove(e){
@@ -141,6 +156,8 @@ function createJugadores(){
         //aviso en pantalla, turno jugador 1
     }
 
-    canvas.addEventListener('mousedown', onMouseDown, false);
-    canvas.addEventListener('mouseup', onMouseUp, false);
-    canvas.addEventListener('mousemove', onMouseMove, false); 
+    function addEvents(){
+        canvas.addEventListener('mousedown', onMouseDown, false);
+        canvas.addEventListener('mouseup', onMouseUp, false);
+        canvas.addEventListener('mousemove', onMouseMove, false); 
+    }

@@ -7,6 +7,7 @@ class Casillero {
         this.posY = 0;
         this.width = 80;
         this.height = 80;
+        this.ficha = null;
     }
 
     draw(){
@@ -14,12 +15,12 @@ class Casillero {
         this.ctx.fillStyle = this.fill;
         this.ctx.fill();
         this.ctx.fillRect(this.posX, this.posY, this.width,this.height)
-        let ficha = new Ficha(this.ctx,this.posX + this.width/2, this.posY + this.height/2, null, null);
-        ficha.draw();
+        if(this.ficha == null){
+            this.ficha = new Ficha(this.ctx,this.posX + this.width/2, this.posY + this.height/2, null, null);
+        }
+        this.ficha.draw();
         this.ctx.closePath();
-
     }
-
 
     setPosX(x){
         this.posX = x;
@@ -43,5 +44,22 @@ class Casillero {
 
     getPosY(){
         return this.posY;
+    }
+
+    isEmpty(){
+        if(this.ficha.getJugador() == null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    setFicha(jugador){
+        if(jugador != null){
+          jugador.getFicha().setPosition(this.ficha.getPositionX, this.ficha.getPositionY);
+          this.ficha = jugador.getFicha();
+          this.ficha.insertadaTrue();
+        }
     }
 }

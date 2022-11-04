@@ -5,8 +5,10 @@ class Ficha {
     this.jugador = jugador;
     this.ctx = ctx;
     this.img = img;
-    this.clickeado = false;
     this.radio = 28;
+    this.insertada = false;
+    this.posOGX = this.x;
+    this.posOGY = this.y;
   }
 
   draw() {
@@ -42,8 +44,14 @@ class Ficha {
   }
 
   setPosition(x, y) {
-    this.x = x;
-    this.y = y;
+    if(this.insertada == false){
+      this.x = x;
+      this.y = y;
+    }
+  }
+  
+  insertadaTrue(){
+    this.insertada = true;
   }
 
   getPositionX(){
@@ -51,5 +59,16 @@ class Ficha {
   }
   getPositionY(){
     return this.y;
+  }
+
+  getJugador(){
+    return this.jugador;
+  }
+
+  getOGPositionX(){
+    return this.posOGX;
+  }
+  getOGPositionY(){
+    return this.posOGY;
   }
 }
