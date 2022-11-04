@@ -1,54 +1,55 @@
 class Ficha {
+  constructor(ctx, x, y, img, jugador) {
+    this.x = x;
+    this.y = y;
+    this.jugador = jugador;
+    this.ctx = ctx;
+    this.img = img;
+    this.clickeado = false;
+    this.radio = 28;
+  }
 
-    constructor(ctx, x, y, img, jugador){
-        this.x = x;
-        this.y = y;
-        this.jugador = jugador;
-        this.ctx = ctx;
-        this.img = img;
-    }
-
-
-
-/*
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(100, 80, 50, 0, 2 * Math.PI);
-ctx.stroke();
- */
-draw(){
+  draw() {
     this.ctx.beginPath();
-    this.ctx.lineWidth = 15;
-    this.ctx.strokeStyle = "#D0A200"
-    this.ctx.arc(this.x,this.y,25,0,2*Math.PI);
-    this.ctx.stroke();
+    this.ctx.lineWidth = 5;
+    this.ctx.strokeStyle = "#2A019E";
+    this.ctx.arc(this.x, this.y, this.radio, 0, 2 * Math.PI);
     if (this.jugador != null) {
-        this.ctx.fillStyle = this.img;
-    }else{
-        this.ctx.fillStyle = "#FFFFFF";
+      this.ctx.lineWidth = 5;
+      this.ctx.save();
+      this.ctx.beginPath();
+      this.ctx.arc(this.x, this.y, this.radio, 0, 2 * Math.PI, true);
+      this.ctx.clip();
+      this.ctx.drawImage(this.img, this.x - 28, this.y - 28, 56, 56);
+      this.ctx.closePath();
+      this.ctx.restore();
+    } else {
+      this.ctx.fillStyle = "#FFFFFF";
+      this.ctx.fill();
     }
-    this.ctx.fill();
+    this.ctx.stroke();
     this.ctx.closePath();
-}
-}
+  }
 
-// img.onload = function () {
-//     coorY = 0, coorX = 300;
-//     for (let x = 3; x < (11 + valorDeLinea); x++) {
-//         let lugares = []
-//         for (let y = 0; y < (7 + valorDeLinea); y++) {
-//             coorY = y * 100;
-//             if (y != 0) {
-//                 context.spaces.drawImage(img, coorX, coorY);
-//                 lugares.push({
-//                     coorY,
-//                     jugador: 0,
-//                 });
-//             }
-//         }
-//         matrix[x] = lugares;
-//         coorX = x * 100;
-//     }
+  isPointInside(x, y) {
+    let _x = x - this.x;
+    let _y = y - this.y;
+    if (this.jugador != null) {
+      return Math.sqrt(_x * _x * _y * _y) < this.radio;
+    } else {
+      return false;
+    }
+  }
 
-// }
+  setPosition(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  getPositionX(){
+    return this.x;
+  }
+  getPositionY(){
+    return this.y;
+  }
+}
