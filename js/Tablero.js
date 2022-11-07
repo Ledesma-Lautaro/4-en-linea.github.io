@@ -65,8 +65,10 @@ class Tablero {
     getCasillero(x){
     for (let index = 0; index < this.casilleros.length; index++) {
         const casillero = this.casilleros[index];
-        while(casillero.getPosX() == x && casillero.isEmpty()){
-            index++;
+        if(casillero.getPosX() == x){
+            while(casillero.getPosX() == x && casillero.isEmpty()){
+                index++;
+            }
         }
         return this.casilleros[index--];
     }

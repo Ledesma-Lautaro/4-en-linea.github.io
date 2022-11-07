@@ -161,3 +161,37 @@ function createJugadores(){
         canvas.addEventListener('mouseup', onMouseUp, false);
         canvas.addEventListener('mousemove', onMouseMove, false); 
     }
+
+    function setTimer(){
+        let minutes = 1;
+        let seconds = 30;
+        let minutestxt = document.getElementById("minutestxt");
+        let secondstxt = document.getElementById("secondstxt");
+        minutestxt.innerHTML = minutes;
+        secondstxt.innerHTML = seconds;
+        setTimeout(() => {
+            console.log("set time out")
+            if (minutes == 1) {
+                if(seconds >= 1){
+                    seconds--;
+                    secondstxt.innerHTML = seconds;
+                    console.log("pasa por el if")
+                }
+                else if(seconds == 0){
+                    minutes = 0;
+                    seconds = 59;
+                    minutestxt.innerHTML = minutes;
+                    secondstxt.innerHTML = seconds;
+                }
+            }
+            else if(minutes == 0 && seconds != 0){
+                seconds--;
+                secondstxt.innerHTML = seconds;
+            }
+            else if(minutes == 0 && seconds == 0){
+                alert("termino el tiempo");
+            }
+           
+        }, 1000);
+
+    }
