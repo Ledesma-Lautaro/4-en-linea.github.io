@@ -854,6 +854,27 @@ left: 86%;
   margin-bottom: 3rem;
 }
 
+.display{
+  margin: 1rem;
+  visibility: block;
+  display: flex;
+  justify-content: center;
+}
+
+.restart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restart button{
+  margin: 0.5rem;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
 .game .title, .game-img {
   display: flex;
   align-items: center;

@@ -18,9 +18,17 @@ class Casillero {
         if(this.ficha == null){
             this.ficha = new Ficha(this.ctx,this.posX + this.width/2, this.posY + this.height/2, null, null);
         }
+        if(this.ficha.getImage != null){
+        this.ficha.getImage().onload() = function(){
         this.ficha.draw();
-        this.ctx.closePath();
+        this.ctx.closePath();}
+        }
+        else{
+            this.ficha.draw();
+            this.ctx.closePath();
+        }
     }
+    
 
     setPosX(x){
         this.posX = x;
@@ -61,5 +69,9 @@ class Casillero {
           this.ficha = jugador.getFicha();
           this.ficha.insertadaTrue();
         }
+    }
+
+    getFichaInside(){
+        return this.ficha;
     }
 }

@@ -6,13 +6,18 @@ let j2;
 let tablero;
 let isMouseDown = false
 let jugador = null;
+let timer;
+let imgj1 = new Image();
+let imgj2 = new Image();
+let turnos = 0;
+
 let rect = canvas.getBoundingClientRect();
-
-
 let jugar = document.querySelector("#jugar").addEventListener('click', init);
+let reiniciar = document.querySelector("#reiniciar").addEventListener('click', restart)
 
 function init(){
     console.log("Entra al init");
+    changeButtons();
     createBoard();
     createJugadores();
     StartGame();
@@ -22,10 +27,10 @@ function init(){
 
 function createBoard(){
     console.log("entra al board");
-    let modo = document.querySelector("#modoJuego").value;
     let cantX = 0;
     let cantY = 0;
     let posX;
+    let modo = document.querySelector("#modoJuego").value;
     //4 en linea
     if(modo == 1){
         cantX = 7;
@@ -49,11 +54,29 @@ function createBoard(){
     tablero.construirTablero(cantX, cantY);
 }
 
+function changeButtons(){
+    let buttons = document.querySelector(".display");
+    let restart = document.querySelector(".restart")
+
+    if(!buttons.classList.contains('hidden')){
+        buttons.classList.add('hidden');
+        restart.classList.remove('hidden');       
+        }else{
+            buttons.classList.remove('hidden');
+            restart.classList.add('hidden')
+        }
+}
+
+function restart (){
+    changeButtons();
+    clearCanvas();
+    clearInterval(timer);
+}
+
 function createJugadores(){
     let imgvalue = document.querySelector("#fichasImg").value;
     let modo = document.querySelector("#modoJuego").value;
-    let imgj1 = new Image();
-    let imgj2 = new Image();
+    
     let nroFichas = 0;
 
     if(imgvalue == 1){
@@ -105,15 +128,33 @@ function createJugadores(){
 
     function onMouseUp(e){
         isMouseDown = false;
-        
+        //si el jugador esta agarrando una ficha
        if(jugador.getFicha() != null){
-            let drop = tablero.isInsideDrop(e.layerX - rect.left, e.layerY-rect.top)
+        //si la ficha del jugador no es nula significa que esta agarrando una
+
+        let drop = tablero.isInsideDrop(e.layerX - rect.left, e.layerY-rect.top)
+
             if(drop != null){
-                casillero = tablero.getCasillero(drop.getPosX());
+            //si el drop no es nulo significa que la ficha fue soltada en un drop
+                let modo = document.querySelector("#modoJuego").value;
+                //se busca la fila donde se soltó, con el posX
+                fila = tablero.getFila(drop.getPosX());
+                //se busca el casillero mas abajo posible, en la misma fila
+                casillero = tablero.getCasillero(fila, modo);
+                //insertamos la ficha en su respectivo casillero
                 tablero.insertFicha(casillero, jugador);
+                //se redibuja todo el canvas
                 redraw();
+                //buscamos si hay un ganador
+                verifyWinner(modo);
+                //cambiamos de turno y jugador
+                changeTurn();
+                //reiniciamos el timer
+                clearInterval(timer);
+                setTimer();
             }
             else{
+                //busca las posiciones originales de la ficha y la devuelve
                 posX = jugador.getFicha().getOGPositionX();
                 posY = jugador.getFicha().getOGPositionY();
                 jugador.getFicha().setPosition(posX, posY);
@@ -135,7 +176,8 @@ function createJugadores(){
         if(j1.getTurn()){
             j1.findClicked(x, y);
             return j1;
-        }else{
+        }
+        else{
             j2.findClicked(x, y);
             return j2;
         }
@@ -143,16 +185,20 @@ function createJugadores(){
     }
 
     function redraw(){
+        clearCanvas();
+            tablero.redraw();
+            j1.redraw();
+            j2.redraw();
+        
+    }
+
+    function clearCanvas(){
         ctx.clearRect(0, 0, 1200, 800)
-        tablero.redraw();
-        j1.redraw();
-        j2.redraw();
-
-
     }
 
     function StartGame(){
         j1.isMyTurn();
+        anuncio(j1, 20);
         //aviso en pantalla, turno jugador 1
     }
 
@@ -162,20 +208,50 @@ function createJugadores(){
         canvas.addEventListener('mousemove', onMouseMove, false); 
     }
 
+
+    function changeTurn() {
+        
+
+        if(jugador == j1){
+            let x = 950;
+            jugador.isNotMyTurn();
+            jugador = j2;
+            jugador.isMyTurn()
+            anuncio(jugador, x);
+        }
+        else{
+            let x = 20;
+            jugador.isNotMyTurn();
+            jugador = j1;
+            jugador.isMyTurn();
+            anuncio(jugador, x);
+        }
+
+    }
+
+    function anuncio(jugador, x){
+        ctx.font = '25px Arial';
+        ctx.fillStyle = "#FFD300";
+        ctx.fillText('Turno del '+jugador.getNombre(), x, 50);
+    }
     function setTimer(){
+        
         let minutes = 1;
         let seconds = 30;
         let minutestxt = document.getElementById("minutestxt");
         let secondstxt = document.getElementById("secondstxt");
         minutestxt.innerHTML = minutes;
         secondstxt.innerHTML = seconds;
-        setTimeout(() => {
-            console.log("set time out")
+        timer = setInterval(() => {
             if (minutes == 1) {
                 if(seconds >= 1){
-                    seconds--;
-                    secondstxt.innerHTML = seconds;
-                    console.log("pasa por el if")
+                    if(seconds <= 10){
+                        seconds--;
+                        secondstxt.innerHTML = "0" + seconds;
+                    }
+                    else{   
+                        seconds--;
+                        secondstxt.innerHTML = seconds;}
                 }
                 else if(seconds == 0){
                     minutes = 0;
@@ -185,13 +261,58 @@ function createJugadores(){
                 }
             }
             else if(minutes == 0 && seconds != 0){
+                if(seconds <= 10){
+                    seconds--;
+                    secondstxt.innerHTML = "0" + seconds;
+                }
+                else{
                 seconds--;
                 secondstxt.innerHTML = seconds;
+                }
             }
             else if(minutes == 0 && seconds == 0){
-                alert("termino el tiempo");
+                if (jugador == null) {
+                    if(j1.getTurn){
+                        jugador = j1;
+                    }else{
+                        jugador = j2
+                    }
+                }
+                turnos++
+                changeTurn();
+                if(turnos > 4){
+                    noOneWins()
+                }
+
             }
            
         }, 1000);
+    }
 
+    function noOneWins(){
+        clearCanvas();
+        let x = canvas.width / 2 - 50
+        ctx.font = '48px serif';
+        ctx.fillStyle = "#FFFFFF";
+        //ctx.textAlign("center");
+        ctx.fillText('¡Empate!', x, 50);
+      
+    }
+
+    function verifyWinner(modo){
+        if(tablero.thereIsWinner(modo)){
+            clearCanvas();
+            let img = new Image();
+            let x = canvas.width / 2 - 170
+            img.src = "img/thanos.jpg"
+            ctx.drawImage(img, 0, 0,1200,600);
+            ctx.font = '48px serif';
+            ctx.fillStyle = "#FFFFFF";
+            //ctx.textAlign("center");
+            if(jugador == j1){
+                ctx.fillText('Ganó el Jugador 1', x, 50);
+            }else{
+                ctx.fillText('Ganó el Jugador 2', x, 50);
+            }
+        }
     }

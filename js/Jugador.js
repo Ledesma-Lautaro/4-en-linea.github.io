@@ -39,6 +39,14 @@ class Jugador{
 
     }
 
+    getImage(){
+        return this.img;
+    }
+
+    getNombre(){
+        return this.nombre;
+    }
+
     redraw(){
         this.fichas.forEach(ficha => {
             
@@ -74,10 +82,9 @@ class Jugador{
         for (let index = 0; index < this.fichas.length; index ++) {
             let ficha = this.fichas[index];
             if(ficha.isPointInside(x, y)){
-                console.log(ficha);
                 this.fichaClickeada = ficha;
             }
         }
     }
-
+    
 }

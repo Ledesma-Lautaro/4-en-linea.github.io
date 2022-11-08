@@ -14,7 +14,7 @@ class Ficha {
   draw() {
     this.ctx.beginPath();
     this.ctx.lineWidth = 5;
-    this.ctx.strokeStyle = "#2A019E";
+    this.ctx.strokeStyle = "#5C27FC";
     this.ctx.arc(this.x, this.y, this.radio, 0, 2 * Math.PI);
     if (this.jugador != null) {
       this.ctx.lineWidth = 5;
@@ -26,7 +26,7 @@ class Ficha {
       this.ctx.closePath();
       this.ctx.restore();
     } else {
-      this.ctx.fillStyle = "#FFFFFF";
+      this.ctx.fillStyle = "#110041";
       this.ctx.fill();
     }
     this.ctx.stroke();

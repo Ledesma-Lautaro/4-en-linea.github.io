@@ -14,7 +14,7 @@ class Drop extends Casillero{
         this.ctx.fillStyle = this.fill;
         this.ctx.fill();
         this.ctx.fillRect(this.posX, this.posY, this.width,this.height)
-        this.ctx.strokeStyle = "#FFFFF";
+        this.ctx.strokeStyle = "#110041";
         this.ctx.stroke();
         this.ctx.closePath();
 

@@ -155,20 +155,27 @@
                   </a>
     
             </div>
-            <select name="" id="modoJuego">
-              <option value="1">4 en linea</option>
-              <option value="2">5 en linea</option>
-              <option value="3">6 en linea</option>
-            </select>
-            <select name="" id="fichasImg">
-              <option value="1">Thanos vs Spiderman</option>
-              <option value="2">IronMan vs Ultron</option>
-              <option value="3">Thor vs Loki</option>
-            </select>
-            <button id="jugar">Jugar</button>
+            
+            <div class="display">
+              <select name="" id="modoJuego">
+                <option value="1">4 en linea</option>
+                <option value="2">5 en linea</option>
+                <option value="3">6 en linea</option>
+              </select>
+              <select name="" id="fichasImg">
+                <option value="1">Thanos vs Spiderman</option>
+                <option value="2">IronMan vs Ultron</option>
+                <option value="3">Thor vs Loki</option>
+              </select>
+              <button id="jugar">¡Jugar!</button>
+            </div>
 
-            <h2 id="minutestxt"></h2>
-            <h2 id="secondstxt"></h2>
+            <div class="restart hidden">
+              <button id="reiniciar">Reiniciar</button>
+              <h2 id="minutestxt"></h2>
+              <h2>:</h2>
+              <h2 id="secondstxt"></h2>
+            </div>
             <div class="game-img">
               <canvas width="1200" height="800"></canvas>
             </div>
