@@ -172,4 +172,4 @@ class Tablero {
             return false
         }
     }
-}
+} 

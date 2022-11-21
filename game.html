@@ -10,15 +10,16 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
     <nav>
-      <a href="#">
+      <a class="hamburger" href="#">
         <div class="round-btn" id="ham-btn">
-          <img
-            class="icon-white"
-            src="img/hamburger-menu-svgrepo-com.svg"
-            alt=""
-          />
+          <div class="hamburger-icon">
+            <div id="firstLine"></div>
+            <div id="secondLine"></div>
+            <div id="thirdLine"></div>
+
+          </div>
         </div>
       </a>
       <a href="index.html">
@@ -32,53 +33,53 @@
     </nav>
 
     <nav class="hamburguer-menu">
-      <a href="#">
-        <img src="img/cross-svgrepo-com.svg" class="cross icon-white" id="leftCross" alt="" />
-      </a>
       <h1>Menu</h1>
+      <ul class="buscar">
+        <li>
+            <form action="">
+              <input placeholder="Buscar..." class="search" type="text" />
+            </form>
+          </li>
+      </ul>
       <ul class="categorias">
-        <li class="buscar">
-          <form action="">
-            <input placeholder="Buscar..." class="search" type="text" />
-          </form>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <h2>Categorias</h2>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <h2>Tendencias</h2>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <h2>Mas jugados</h2>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="" alt="" />
-            <h2>Recientes</h2>
-          </a>
-        </li>
+          <li class="categoria">
+            <a href="">
+              <img src="" alt="" />
+              <h2>Categorias</h2>
+            </a>
+          </li>
+          <li class="categoria">
+            <a href="">
+              <img src="" alt="" />
+              <h2>Tendencias</h2>
+            </a>
+          </li>
+          <li class="categoria">
+            <a href="">
+              <img src="" alt="" />
+              <h2>Mas jugados</h2>
+            </a>
+          </li>
+          <li class="categoria"> 
+            <a href="">
+              <img src="" alt="" />
+              <h2>Recientes</h2>
+            </a>
+          </li>
+        </div>
       </ul>
       <ul class="redes">
-        <li class="round-btn">
+        <li class="red round-btn" id="red">
           <img class="icon-white" src="img/youtube-svgrepo-com.svg" alt="" />
         </li>
-        <li class="round-btn">
+        <li class="red round-btn" id="red">
           <img
             class="icon-white"
             src="img/instagram-svgrepo-com (1).svg"
             alt=""
           />
         </li>
-        <li class="round-btn">
+        <li class="red round-btn" id="red">
           <img class="icon-white" src="img/facebook-svgrepo-com.svg" alt="" />
         </li>
       </ul>
