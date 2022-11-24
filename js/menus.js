@@ -5,7 +5,6 @@ let leftMenu = document.querySelector(".hamburguer-menu");
 let search = document.querySelector(".buscar");
 let categorias= document.querySelectorAll(".categorias .categoria");
 let redes = document.querySelectorAll(".red");
-console.log(redes);
 
 let main = document.querySelector(".main");
 let leftCross = document.querySelector("#leftCross");
@@ -19,7 +18,6 @@ var iconAfter = document.querySelector('#thirdLine');
 
 
 hamburger.addEventListener('click',() =>{
-    console.log(redes);
 
     if(leftMenu.classList.contains('show')){
         leftMenu.classList.remove('show');
@@ -36,7 +34,6 @@ hamburger.addEventListener('click',() =>{
         iconBefore.setAttribute("style", "none;");
         iconAfter.setAttribute("style", "none;");
     }else{
-        console.log("pasa else");
         leftMenu.classList.add('show');
         search.classList.add('show');
         categorias.forEach(categoria => {
@@ -48,7 +45,6 @@ hamburger.addEventListener('click',() =>{
             setTimeout(function(){
                 red.classList.add('show')
             },200)
-            console.log("añade show");
         });
         main.classList.add('blur');
         //animacion icono
@@ -93,9 +89,7 @@ main.addEventListener('click', () =>{
 
 window.addEventListener('scroll', () =>{
     const scrolled = window.scrollY;
-    console.log(scrolled);
     if(scrolled > 500){
-        console.log("entra");
         header.classList.add('transition')
     }else if(scrolled < 500){
         header.classList.remove('transition')

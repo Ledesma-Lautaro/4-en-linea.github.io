@@ -1258,6 +1258,7 @@ section.hades {
 
 .card-hades1 .text-container {
   display: block;
+  transform: translateX(-100%);
 }
 
 .card-hades1 .weapon-img {
@@ -1266,6 +1267,7 @@ section.hades {
 
 .card-hades1 .history-img {
   display: block;
+  transform: translateY(100%);
 }
 
 /* ocultando todo de la card 2 */
@@ -1306,12 +1308,15 @@ section.hades {
 .card-hades2 .weapon-hades-img img {
   display: block;
 }
+.card-hades2 .weapon-text{
+  transform: translateX(100%);
+}
 
 .card-hades2 .weapon-hades-img {
   display: block;
   width: 100%;
   height: 800px;
-  
+  transform: translateY(100%);
 }
 
 .card-hades2 .weapon-hades-img img {
@@ -1328,6 +1333,10 @@ section.hades {
   margin-top: 3rem;
 }
 
+.card-hades2 .weapons-img{
+  transform: translateX(200%);
+}
+
 .card-hades2 .weapons {
   display: flex;
   flex-direction: column;
@@ -1338,6 +1347,7 @@ section.hades {
 
 .card-hades2 .weapon-title {
   color: rgba(240, 195, 0, 1);
+  opacity: 0;
 }
 
 /* hades card 3 */
@@ -1367,11 +1377,17 @@ section.hades {
   height: 800px;
 }
 
+.card-hades3 .bendiciones-title{
+  opacity: 0;
+  transform: translateY(25%);
+}
+
 .card-hades3 .first-line,
 .card-hades3 .second-line {
   display: flex;
   flex-direction: row nowrap;
   justify-content: center;
+  transform: translateX(-250%);
 }
 
 .card-hades3 .first-line,
@@ -1388,6 +1404,9 @@ section.hades {
 }
 
 
+.card-hades3 .hades-guantes{
+  transform: translateY(100%);
+}
 
 .card-hades3 .hades-guantes img {
   width: auto;
@@ -1398,19 +1417,15 @@ section.hades {
 
 .card-hades3 .bendiciones-text {
   margin-bottom: 5rem;
+  transform: translateX(-200%);
 }
 
 /* animaciones */
-.slidein {
-  animation: 1s ease 0s forwards slidein;
-}
-
-.slideout {
-  animation: 1s ease 0s forwards slideout;
-}
 
 #history-title {
   margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(50%);
 }
 
 .button-container {
@@ -1456,6 +1471,7 @@ section.hades {
   display: flex;
   flex-direction: row nowrap;
   align-items: center;
+  overflow: hidden;
 }
 
 .history-img {
@@ -1538,6 +1554,8 @@ section.hades {
   background-color: rgba(16, 16, 16, 1);
 }
 
+/*empieza el icono*/
+
 #ham-btn{
   position: relative;
   display: flex;
@@ -1583,6 +1601,8 @@ section.hades {
   transform: translateY(10px);
 }
 
+
+/* empieza animacion menu izq */
 @keyframes hamburger{
 to{
   transform: translateX(-50px);
@@ -1600,3 +1620,45 @@ to{
       transform: rotate(45deg);
     }
   }
+
+  /* empieza animacion de carrousel de historia (dentro de las cards) */
+
+@keyframes fade-up{
+  from{
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  }
+  @keyframes fade-left{
+    from{
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    }
+@keyframes fade-right{
+      from{
+        opacity: 0;
+      }
+      to{
+        transform: translateX(0%);
+        opacity: 1;
+      }
+} 
+@keyframes fade{
+ to{
+    opacity: 1;
+  }
+} 
+
+
+/* punto 6 tp */
+
+.cards-personajes{
+  transform: translateY(-200%);
+}
