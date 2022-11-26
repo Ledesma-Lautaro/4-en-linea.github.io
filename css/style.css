@@ -862,6 +862,8 @@ footer .aside-footer nav {
   }
 }
 
+
+
 /*Pagina Game*/
 
 .game {
@@ -1102,12 +1104,34 @@ footer .aside-footer nav {
 .main-part {
   display: flex;
   flex-direction: column;
-  background: url("\\img/main-hades.png");
+ /* background: url("\\img/main-hades.png");*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.parallax{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.hades-logo{
+ 
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-top: 25rem;
+
 }
 
 .second-part {
@@ -1122,12 +1146,7 @@ footer .aside-footer nav {
   width: 100%;
 }
 
-.main-part img {
-  display: block;
-  margin: auto;
-  width: 50%;
-  margin-top: 25rem;
-}
+
 
 .hades-text {
   padding: 2rem 0rem 2rem 0rem;
@@ -1662,3 +1681,37 @@ to{
 .cards-personajes{
   transform: translateY(-200%);
 }
+
+/*punto 9 tp*/
+
+/*tres animaciones y hacer el efecto desde javascript*/
+
+.character-title{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes first-fade-right{
+  from{
+    opacity: 0;
+  }
+  to{
+     opacity: 0.25;
+   }
+ } 
+ @keyframes second-fade-right{
+  from{
+    opacity: 0.25;
+  }
+  to{
+     opacity: 0.6;
+   }
+ } 
+ @keyframes third-fade-right{
+  from{
+    opacity: 0.6;
+  }
+  to{
+     opacity: 1;
+   }
+ } 
