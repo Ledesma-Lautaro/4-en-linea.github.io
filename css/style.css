@@ -1104,7 +1104,6 @@ footer .aside-footer nav {
 .main-part {
   display: flex;
   flex-direction: column;
- /* background: url("\\img/main-hades.png");*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -1138,7 +1137,7 @@ footer .aside-footer nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url("\\img/green-hades.jpg");
+  background: url("img/green-hades.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -1255,7 +1254,7 @@ section.hades {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("\\img/red-hades.jpg");
+  background: url("img/red-hades.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -1510,7 +1509,7 @@ section.hades {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url("\\img/eliseo.png");
+  background: url("img/eliseo.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
