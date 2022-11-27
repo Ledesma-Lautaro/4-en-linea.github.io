@@ -53,7 +53,6 @@ function checkForVisibility() {
 window.addEventListener('scroll', () =>{
     if(isElementInViewport(cards[1])){
     for (let index = 0; index < arrayCards .length; index++) {
-        console.log(arrayCards);
         const card = arrayCards[index];
         setTimeout(function(){
             //en vez e card, va a tener que ser card 1, etc, dependiendo del id, para que se muestren
