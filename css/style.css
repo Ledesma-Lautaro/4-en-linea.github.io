@@ -1688,30 +1688,42 @@ to{
 
 .character-title{
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-100%); 
+  transition: all 1.2s ease-out;
+}
+
+.titleVisible{
+    opacity: 1;
+    transform: translateX(0%);;
 }
 
 @keyframes first-fade-right{
   from{
     opacity: 0;
+    transform: translateX(-100%);
   }
   to{
      opacity: 0.25;
+     transform: translateX(-75%);
    }
  } 
  @keyframes second-fade-right{
   from{
     opacity: 0.25;
+    transform: translateX(-75%);
   }
   to{
      opacity: 0.6;
+     transform: translateX(-40%);
    }
  } 
  @keyframes third-fade-right{
   from{
     opacity: 0.6;
+    transform: translateX(-40%);
   }
   to{
      opacity: 1;
+     transform: translateX(0%);
    }
  } 
